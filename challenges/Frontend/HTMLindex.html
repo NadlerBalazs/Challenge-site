@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script id="api">
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const actualPageId = urlParams.get('id');
+        let chl = document.createElement("script");
+        chl.setAttribute("src", "HTML/"+actualPageId+"/checklist.js");
+        $(function(){
+            $("#checkList").load("HTML/"+actualPageId+"/tasklist.html"); 
+        });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <title>Munkacím: Hacknikum</title>
+</head>
+<style type="text/css">
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 350px 350px 350px;
+    border: solid 2pt red;
+}
+
+#html-editor{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+ 
+    
+#return{
+grid-column-start: 2;
+  grid-column-end: 3; 
+  grid-row-start: 1;
+  grid-row-end: 4;   
+    border: solid 2pt green;
+    visibility: hidden;
+}
+    
+    ul{
+        list-style-type: none;
+    }
+    
+    .fa-times{
+        color: red;
+    }  
+    .fa-check{
+        color: green;
+    }
+    
+    .row{
+        height: 500px;
+    }
+    
+</style>
+<body class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<span class="navbar-brand">Hacknikum</span>
+<ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Kezdőlap
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profilom</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Feladatok</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eredményeim</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Beállítások</a>
+        </li>
+        </ul>
+</nav>
+
+
+
+<div class="row">
+    <div class="col-6" id="html-editor" oninput="showPreview()"></div>
+    <iframe  class="col-6" id="return"></iframe>
+</div>
+
+<script>
+    var iframe = document.getElementById("return");
+    var html = "";
+
+
+    iframe.contentWindow.document.open();
+    iframe.contentWindow.document.write(html);
+    iframe.contentWindow.document.close(); 
+    document.getElementById("return").style.visibility = "visible";
+
+    let htmlEditor = ace.edit("html-editor");
+    htmlEditor.setTheme("ace/theme/monokai");
+    htmlEditor.getSession().setMode("ace/mode/html");
+    htmlEditor.setFontSize(20);  
+    
+    function showPreview(){
+    var htmlCode = htmlEditor.getValue();
+    var frame = document.getElementById("return").contentDocument;
+    frame.open();
+    frame.write(htmlCode);
+    frame.close();
+    }    
+</script>
+
+
+<button class="btn btn-warning" id="check" data-toggle="modal" data-target=".bd-example-modal-sm">Ellenőrzés</button>
+<div id="checkList"></div>
+
+<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Feladat</button>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      Feladatleírás helye
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

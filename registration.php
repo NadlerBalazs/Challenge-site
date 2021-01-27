@@ -1,0 +1,50 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Hacknikum regisztráció</title>
+</head>
+<body>
+	<?php require_once 'messages.php'; ?>
+    <form class="container register-form" action="signup.php" method="POST">
+        <div class="form" >
+            <div class="note">
+                <p>Üdvözlünk a Hacknikum rendszerben!</p>
+            </div>
+
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Felhasználónév *" name="username" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Teljes név *" name="fullname" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Osztály *" name="class" value=""/>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Jelszó *" name="passw" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Jelszó még egyszer *" name="passw2" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="E-mail *" name="email" value=""/>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Regisztráció"/>
+            </div>
+        </div>
+    </form>    
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+      Ace Editor — Jotted
+  </title>
+  <meta name="description" content="Environment for showcasing HTML, CSS and JavaScript, with editable source. Like JSFiddle or JS Bin for self-hosted demos.">
+  <meta name="keywords" content="jot,jotted,html,css,javascript,editor,client-side,self-hosted,demo,jsfiddle,jsbin,codepen,cssdeck,fiddle">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="jotted_elemei/css.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="jotted_elemei/gridlayout.css">
+  <link rel="stylesheet" href="jotted_elemei/prism.css">
+  <link rel="stylesheet" href="jotted_elemei/jotted.css">
+
+  <link rel="stylesheet" href="jotted_elemei/site.css">
+<script src="jotted_elemei/prompt.js"></script></head>
+<body>
+
+  <script src="jotted_elemei/jotted.js"></script>
+
+  
+
+<div class="gl gl-vertical">
+
+  <div class="gl-cell header-demo">
+
+    <div class="gl">
+
+      <div class="gl-cell">
+
+        <a href="https://ghinda.net/jotted/" class="button-back">
+          ← Back to documentation
+        </a>
+
+        <h1>
+          Jotted
+        </h1>
+
+      </div>
+
+      <div class="gl-cell dropdown-container">
+
+        <div class="dropdown dropdown-active">
+
+          <a href="#dropdown-demos" class="button dropdown-button">
+            Demos
+          </a>
+
+          <ul id="dropdown-demos" class="dropdown-content">
+            <li>
+              <a href="https://ghinda.net/jotted/demos/ace.html">
+                Ace Editor
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/codemirror.html">
+                CodeMirror Editor
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/markdown.html">
+                Markdown
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/less.html">
+                Less
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/stylus.html">
+                Stylus
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/coffeescript.html">
+                CoffeeScript
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/es2015.html">
+                ES2015
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/files.html">
+                External files
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/console.html">
+                Console Plugin
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/play.html">
+                Play Plugin
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/pen.html">
+                Pen Plugin
+              </a>
+            </li>
+            <li>
+              <a href="https://ghinda.net/jotted/demos/theme-bin.html">
+                Bin Theme
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="gl-cell gl-fill">
+
+    <div class="jotted-demo jotted jotted-pane-active-result jotted-has-html jotted-plugin-codemirror jotted-plugin-render">
+    <ul class="jotted-nav">
+      <li class="jotted-nav-item jotted-nav-item-result">
+        <a href="#" data-jotted-type="result">
+          Result
+        </a>
+      </li>
+      <li class="jotted-nav-item jotted-nav-item-html">
+        <a href="#" data-jotted-type="html">
+          HTML
+        </a>
+      </li>
+      <li class="jotted-nav-item jotted-nav-item-css">
+        <a href="#" data-jotted-type="css">
+          CSS
+        </a>
+      </li>
+      <li class="jotted-nav-item jotted-nav-item-js">
+        <a href="#" data-jotted-type="js">
+          JavaScript
+        </a>
+      </li>
+    </ul>
+    <div class="jotted-pane jotted-pane-result"><iframe></iframe></div>
+    <div class="jotted-pane jotted-pane-html"><div class="jotted-editor jotted-editor-html">
+    <textarea data-jotted-type="html" data-jotted-file="" style="display: none;">
+&lt;h2&gt;
+  Jotted demo using Jotted
+&lt;/h2&gt;
+
+&lt;p&gt;
+  Make sure you load &lt;a href="https://ace.c9.io/#nav=about" target="_blank"&gt;Ace&lt;/a&gt; first.
+&lt;/p&gt;
+
+&lt;p&gt;
+  You can get it from &lt;a href="https://github.com/ajaxorg/ace-builds/" target="_blank"&gt;ace-builds&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;div id="jotted-demo-ace"&gt;&lt;/div&gt;
+
+&lt;script src="../bower_components/ace-builds/src/ace.js"&gt;&lt;/script&gt;
+
+&lt;link href="../jotted.css" rel="stylesheet"&gt;
+&lt;script src="../jotted.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  new Jotted(document.querySelector('#jotted-demo-ace'), {
+    files: [
+      {
+        type: 'html',
+        content: '&lt;html&gt;\n&lt;body&gt;\n&lt;h1&gt;Using Ace Editor&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;'
+      }
+    ],
+    pane: 'html',
+    showBlank: true,
+    plugins: [
+      'ace'
+    ]
+  });
+&lt;/script&gt;</textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: currentcolor none medium;" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="display: block; right: 0px; left: 30px;"><div style="height: 100%; min-height: 1px; width: 743px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -12px; border-right-width: 18px; min-height: 518px; min-width: 743.1px; padding-right: 0px; padding-bottom: 12px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: currentcolor none medium;"><div class="CodeMirror-measure"><span><span>​</span>x</span><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>34</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 15px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line "><span>&lt;h2&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line "><span>  Jotted demo using Jotted</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line "><span>&lt;/h2&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line "><span>&lt;p&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line "><span>  Make sure you load &lt;a href="https://ace.c9.io/#nav=about" target="_blank"&gt;Ace&lt;/a&gt; first.</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line "><span>&lt;/p&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line "><span>&lt;p&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line "><span>  You can get it from &lt;a href="https://github.com/ajaxorg/ace-builds/" target="_blank"&gt;ace-builds&lt;/a&gt;.</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line "><span>&lt;/p&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line "><span>&lt;div id="jotted-demo-ace"&gt;&lt;/div&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line "><span>&lt;script src="../bower_components/ace-builds/src/ace.js"&gt;&lt;/script&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line "><span>&lt;link href="../jotted.css" rel="stylesheet"&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line "><span>&lt;script src="../jotted.js"&gt;&lt;/script&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line "><span>&lt;script&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line "><span>  new Jotted(document.querySelector('#jotted-demo-ace'), {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line "><span>    files: [</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line "><span>      {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line "><span>        type: 'html',</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line "><span>        content: '&lt;html&gt;\n&lt;body&gt;\n&lt;h1&gt;Using Ace Editor&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line "><span>      }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line "><span>    ],</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line "><span>    pane: 'html',</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line "><span>    showBlank: true,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line "><span>    plugins: [</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line "><span>      'ace'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre class=" CodeMirror-line "><span>    ]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre class=" CodeMirror-line "><span>  });</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre class=" CodeMirror-line "><span>&lt;/script&gt;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 18px; width: 1px; top: 530px;"></div><div class="CodeMirror-gutters" style="height: 548px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+    <div class="jotted-status"></div>
+  </div></div>
+    <div class="jotted-pane jotted-pane-css"><div class="jotted-editor jotted-editor-css">
+    <textarea data-jotted-type="css" data-jotted-file="" style="display: none;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: currentcolor none medium;" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px;"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: currentcolor none medium;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line"><span><span cm-text="">​</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div></div></div></div>
+    <div class="jotted-status"></div>
+  </div></div>
+    <div class="jotted-pane jotted-pane-js"><div class="jotted-editor jotted-editor-js">
+    <textarea data-jotted-type="js" data-jotted-file="" style="display: none;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: currentcolor none medium;" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px;"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: currentcolor none medium;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line"><span><span cm-text="">​</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div></div></div></div>
+    <div class="jotted-status"></div>
+  </div></div>
+  </div>
+
+    <div class="demo-content">
+<pre><code>
+&lt;h2&gt;
+  Jotted demo using Jotted
+&lt;/h2&gt;
+
+&lt;p&gt;
+  Make sure you load &lt;a href="https://ace.c9.io/#nav=about" target="_blank"&gt;Ace&lt;/a&gt; first.
+&lt;/p&gt;
+
+&lt;p&gt;
+  You can get it from &lt;a href="https://github.com/ajaxorg/ace-builds/" target="_blank"&gt;ace-builds&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;div id="jotted-demo-ace"&gt;&lt;/div&gt;
+
+&lt;script src="../bower_components/ace-builds/src/ace.js"&gt;&lt;/script&gt;
+
+&lt;link href="../jotted.css" rel="stylesheet"&gt;
+&lt;script src="../jotted.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  new Jotted(document.querySelector('#jotted-demo-ace'), {
+    files: [
+      {
+        type: 'html',
+        content: '&lt;html&gt;\n&lt;body&gt;\n&lt;h1&gt;Using Ace Editor&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;'
+      }
+    ],
+    pane: 'html',
+    showBlank: true,
+    plugins: [
+      'ace'
+    ]
+  });
+&lt;/script&gt;</code></pre>
+    </div>
+
+  </div>
+</div>
+
+<link rel="stylesheet" href="jotted_elemei/codemirror.css">
+<link rel="stylesheet" href="jotted_elemei/demos.css">
+
+<script src="jotted_elemei/codemirror.js"></script>
+<script src="jotted_elemei/he.js"></script>
+<script src="jotted_elemei/demos.js"></script>
+
+
+  <!--[if !(lte IE 8)]><!-->
+  <script src="jotted_elemei/prism.js"></script>
+  <!--<![endif]-->
+  <script src="jotted_elemei/gridlayout-ie.js"></script>
+
+  <script src="jotted_elemei/site.js"></script>
+
+
+</body></html>
