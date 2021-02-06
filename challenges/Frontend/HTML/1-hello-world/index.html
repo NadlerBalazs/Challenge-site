@@ -23,33 +23,42 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <title>Munkacím: Hacknikum</title>
 </head>
-<body class="container-fluid">
-<nav class="navbar navbar-expand-lg">
-<span class="navbar-brand">Hacknikum</span>
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Kezdőlap</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Profilom</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Feladatok</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Eredményeim</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Beállítások</a>
-    </li>
-  </ul>
-</nav>
+<body class="container-fluid d-flex flex-column">
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-lg">
+      <span class="navbar-brand">Hacknikum</span>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Kezdőlap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profilom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Feladatok</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Eredményeim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Beállítások</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
 
 
-<div class="row flex-fill mx-auto">
-    <div class="col-6" id="html-editor" oninput="showPreview()"></div>
-    <iframe  class="col-6" id="return" style="background: #FFFFFF;"></iframe>
+
+<div class="row flex-fill">
+    <div class="col d-flex flex-column">
+      <div class="h-100" id="html-editor" oninput="showPreview()"></div>
+    </div>
+    <div class="col d-flex flex-column">
+      <iframe class="h-100" id="return" style="background: #FFFFFF;"></iframe>
+    </div>
 </div>
 
 <script>
@@ -76,12 +85,14 @@
     }
 </script>
 
-<div class = "buttons">
-  <button class="btn btn-dark btn-block" id="check" data-toggle="modal" data-target=".bd-example-modal-sm">Ellenőrzés</button>
-  <div id="checkList"></div>
+  <div class = "row">
+    <div class="col">
+      <button class="btn btn-dark btn-block" id="check" data-toggle="modal" data-target=".bd-example-modal-sm">Ellenőrzés</button>
+      <div id="checkList"></div>
 
-  <button class="btn btn-dark btn-block" data-toggle="modal" data-target=".bd-example-modal-lg">Feladat</button>
-  <div id="descriptionList"></div>
-</div>
+      <button class="btn btn-dark btn-block" data-toggle="modal" data-target=".bd-example-modal-lg">Feladat</button>
+      <div id="descriptionList"></div>
+    </div>
+  </div>
 </body>
 </html>

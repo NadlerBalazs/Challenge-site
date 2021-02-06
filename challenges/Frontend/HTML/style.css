@@ -1,8 +1,6 @@
-body{
-  --def: #96B7C4;
---inv: #fff;
+html, body, .container-fluid{
+  height: 100%;
 }
-
 
 .container-fluid{
   background-color: #003561;
@@ -22,10 +20,8 @@ ul{
 .fa-check{
   color: green;
 }
-.row{  
-  width: 95%;
-  margin: 0.5cm;
-  border: 10pt solid #879aad;
+.row{
+  border: 2pt solid #879aad;
 }
 
 .btn{
