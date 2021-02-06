@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
 html, body, .container-fluid{
   height: 100%;
+  font-family: "Kanit";
 }
 
 .container-fluid{
@@ -34,7 +37,14 @@ ul{
 
 .btn{
   margin-top: 0.5cm;
+  border: 2pt solid #003561 !important;
   background-color: #b3a98b !important;
+  color: white !important;
+}
+
+.btn:hover{
+    border: 2pt solid #488fdb !important;
+    background-color: #706649 !important;
 }
 
 .navbar{
@@ -42,8 +52,22 @@ ul{
   color: white !important;
 }
 
-.nav-link{
-  color: white !important;
+.nav-brand{
+  font-style: 16pt;
+}
+
+.menuButton{
+  background-color: #488fdb;
+  border:none;
+  color:white;
+  margin: 0.2cm;
+  border:2pt solid #488fdb;
+  transition-duration: 0.3s;
+  font-size: 14pt;
+}
+
+.menuButton:hover{
+  border:2pt solid #b3a98b;
 }
 
 .buttons{
@@ -52,4 +76,8 @@ ul{
 
 #taskButton{
   margin-bottom: 0.5cm;
+}
+
+code{
+  color: #488fdb !important;
 }
