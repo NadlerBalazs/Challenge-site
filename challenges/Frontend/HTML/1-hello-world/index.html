@@ -49,10 +49,13 @@
     </div>
   </div>
 
+<div class="row">
+  <div class="col">
+    <h1>HTML feladat 1: A <code>h1</code> tag</h1>
+  </div>
+</div>
 
-
-
-<div class="row flex-fill">
+<div class="row flex-fill" id="content">
     <div class="col d-flex flex-column">
       <div class="h-100" id="html-editor" oninput="showPreview()"></div>
     </div>
@@ -90,7 +93,7 @@
       <button class="btn btn-dark btn-block" id="check" data-toggle="modal" data-target=".bd-example-modal-sm">Ellenőrzés</button>
       <div id="checkList"></div>
 
-      <button class="btn btn-dark btn-block" data-toggle="modal" data-target=".bd-example-modal-lg">Feladat</button>
+      <button class="btn btn-dark btn-block" id=taskButton data-toggle="modal" data-target=".bd-example-modal-lg">Feladat</button>
       <div id="descriptionList"></div>
     </div>
   </div>

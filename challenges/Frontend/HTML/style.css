@@ -6,6 +6,12 @@ html, body, .container-fluid{
   background-color: #003561;
 }
 
+h1{
+  text-align: center;
+  color: #b3a98b;
+  padding-top: 0.5cm;
+}
+
 #return{
   visibility: hidden;
 }
@@ -17,10 +23,12 @@ ul{
 .fa-times{
   color: red;
 }
+
 .fa-check{
   color: green;
 }
-.row{
+
+#html-editor, #return{
   border: 2pt solid #879aad;
 }
 
@@ -40,4 +48,8 @@ ul{
 
 .buttons{
   margin: 0.5cm;
+}
+
+#taskButton{
+  margin-bottom: 0.5cm;
 }
