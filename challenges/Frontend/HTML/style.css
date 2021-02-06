@@ -1,0 +1,55 @@
+html, body, .container-fluid{
+  height: 100%;
+}
+
+.container-fluid{
+  background-color: #003561;
+}
+
+h1{
+  text-align: center;
+  color: #b3a98b;
+  padding-top: 0.5cm;
+}
+
+#return{
+  visibility: hidden;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.fa-times{
+  color: red;
+}
+
+.fa-check{
+  color: green;
+}
+
+#html-editor, #return{
+  border: 2pt solid #879aad;
+}
+
+.btn{
+  margin-top: 0.5cm;
+  background-color: #b3a98b !important;
+}
+
+.navbar{
+  background-color: #488fdb !important;
+  color: white !important;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.buttons{
+  margin: 0.5cm;
+}
+
+#taskButton{
+  margin-bottom: 0.5cm;
+}
